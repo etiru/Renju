@@ -15,6 +15,7 @@ public class Main extends Application {
     }
 
     static void newGame() {
+        Drawer.gameOver = false;
 
         GridPane grid = new GridPane();
         Scene scene = new Scene(grid, Field.FIELD_SIZE, Field.FIELD_SIZE);

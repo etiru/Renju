@@ -29,7 +29,10 @@ class Field {
     }
 
     void canvasListener(MouseEvent event) {
-        if (Drawer.gameOver) Main.newGame();
+        if (Drawer.gameOver) {
+            Drawer.gameOver = false;
+            Main.newGame();
+        }
 
         // Нормализуем позицию клика, чтобы иметь конкретное пересечение
         int x = (int) event.getX() / 35;
